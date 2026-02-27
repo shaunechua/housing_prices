@@ -3,8 +3,8 @@
 ## Feature Engineering
 - Log-transformed skewed numeric variables
 - Standardised continuous predictors
-- 
 - Added polynomial & interaction terms for linear models
+- Added Area/Age and Age buckets
 
 ## Hyperparameter Tuning
 
