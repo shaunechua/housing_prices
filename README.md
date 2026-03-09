@@ -8,7 +8,7 @@
 
 ## Hyperparameter Tuning
 
-XGBoost hyperparameters were optimised using a structured **sequential stepwise tuning strategy** to reduce search complexity and improve stability.
+XGBoost hyperparameters were optimised using a structured sequential stepwise tuning strategy.
 
 The key parameters were grouped and tuned in stages:
 
@@ -16,15 +16,17 @@ The key parameters were grouped and tuned in stages:
 - **Group 2:** `subsample`, `colsample_bytree`  
 - **Group 3:** `learning_rate`, `num_boost_round`  
 
+We control over fitting by tuning these hyper parameters. The hyper parameters in group 1 go first as they can be thought of as the soft mixers that controls potential interactions locally within each tree, improving generalization and reducing over fitting, but can require more trees or lower training accuracy. More specifically, `max_depth` sets how many 'layers' each tree can grow to while `min_child_weight`sets how much data support a tree leaf needs before the model will split. 
+
 Tuning procedure:
 1. Initialise `learning_rate = 0.1` and `num_boost_round = 1000`.
-2. Tune **Group 1** via cross-validated RMSE.
-3. Fix Group 1 at optimal values and tune **Group 2**.
-4. Fix Groups 1–2 and tune **Group 3** last.
+2. Tune Group 1 via cross-validated RMSE.
+3. Fix Group 1 at optimal values and tune Group 2.
+4. Fix Groups 1–2 and tune Group 3 last.
 
 At each stage, previously tuned parameters were fixed while remaining parameters stayed at default values.  
 
-This staged optimisation reduces the dimensionality of the hyperparameter space, improving computational efficiency while maintaining model performance.
+The idea is that this staged optimisation reduces the dimensionality of the hyperparameter space, improving computational efficiency while maintaining model performance when working with limited RAM.
 
 ## Final Model Selection
 
@@ -37,7 +39,7 @@ Selected XGBoost based on lowest RMSE
 
 ## Running the notebook
 
-### Install dependencies (Python 3.12)
+### Install dependencies (Python 3.12.x)
 ```bash
 pip install -r requirements.txt
 ```
