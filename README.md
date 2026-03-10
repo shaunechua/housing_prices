@@ -1,4 +1,4 @@
-# Housing price prediction 
+# Beginners-guide-to-housing-price-prediction-usibg-boosted-trees:
 
 ## Feature Engineering
 - Log-transformed skewed numeric variables
@@ -47,5 +47,4 @@ pip install -r requirements.txt
 
 ### Outputs
 - Processed data: `data/processed/`
-- Model artefacts: `models/`
 - Figures: `reports/figures/`
