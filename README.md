@@ -2,7 +2,7 @@
 
 ## Dataset
 
-We will use a 2024 housing transactions dataset which includes characteristics of the property as well as the buyer. 
+We will use a 2024 Singapore housing prices dataset which includes characteristics of the property as well as the buyer had a HDB (Public) or private property. 
 
 
 ## Data preprocessing and Feature Engineering
