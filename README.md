@@ -7,7 +7,7 @@ We will use a 2024 Singapore housing prices dataset which includes characteristi
 
 ## Data preprocessing and Feature Engineering
 
-Based on our EDA, we will: 
+Based on our EDA, we: 
 - Log-transformed skewed numeric variables
 - Standardised continuous predictors
 - Added polynomial & interaction terms for linear models
