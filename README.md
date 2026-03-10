@@ -1,6 +1,13 @@
-# Beginners-guide-to-housing-price-prediction-usibg-boosted-trees:
+# Beginners-guide-to-housing-price-prediction-using-boosted-trees:
 
-## Feature Engineering
+## Dataset
+
+We will use a 2024 housing transactions dataset which includes characteristics of the property as well as the buyer. 
+
+
+## Data preprocessing and Feature Engineering
+
+Based on our EDA, we will: 
 - Log-transformed skewed numeric variables
 - Standardised continuous predictors
 - Added polynomial & interaction terms for linear models
