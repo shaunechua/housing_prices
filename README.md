@@ -4,18 +4,26 @@
 
 We will use a 2024 Singapore housing prices dataset which includes characteristics of the property as well as the buyer had a HDB (Public) or private property. 
 
+## EDA
+
+<img src="reports/figures/pairplot_purchaser.png" width="600">
+
+<img src="reports/figures/correlation_heatmap.png" width="600">
+
 
 ## Data preprocessing and Feature Engineering
 
 Based on our EDA, we: 
 - Log-transformed skewed numeric variables
-- Standardised continuous predictors
-- Added polynomial & interaction terms for linear models
-- Added Area/Age and Age buckets
+- Standardised continuous variables
+- Added polynomial terms for linear models
+- Added Area/Age metric and Age buckets
+
+We don't have to add polynomial or interaction terms for our xgboost pipeline because the non linear nature of tree models will capture such relationships by design, however you can chose to add specific terms if you have domain knowledge that suggests those are important to simplify the search space.
 
 ## Hyperparameter Tuning
 
-XGBoost hyperparameters were optimised using a structured sequential stepwise tuning strategy.
+For this project, XGBoost hyperparameters were optimised using a structured sequential stepwise tuning strategy.
 
 The key parameters were grouped and tuned in stages:
 
@@ -37,8 +45,9 @@ The idea is that this staged optimisation reduces the dimensionality of the hype
 
 ## Final Model Selection
 
-Selected XGBoost based on lowest RMSE
+Selected XGBoost based on lowest test RMSE
 
+Visualiztion of the predictions on Central2024testP
 
 <img src="reports/figures/holdout_actual_vs_pred.png" width="600">
 
