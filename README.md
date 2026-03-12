@@ -1,4 +1,4 @@
-# Beginners-guide-to-housing-price-prediction-using-boosted-trees:
+# Beginners-guide-to-tuning-boosted-trees:
 
 ## Dataset
 
