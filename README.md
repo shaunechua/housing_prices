@@ -55,9 +55,11 @@ Visualiztion of the predictions on Central2024testP
 
 ## Running the notebook
 
-### Install dependencies (Python 3.12.x)
+### Install dependencies and run in vscode (Python 3.12.x)
 ```bash
-pip install -r requirements.txt
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install .
 ```
 
 

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "housing-prices"
+version = "0.1.0"
+description = "Notebook-based housing price modelling and XGBoost tuning project."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "ipykernel>=6.0",
+  "jupyter>=1.0", 
+  "jupyterlab>=4,<5",
+  "matplotlib>=3.8,<4",
+  "numpy>=2,<3",
+  "pandas>=2.2,<3",
+  "scikit-learn>=1.4",
+  "seaborn>=0.13",
+  "xgboost>=2",
+]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.uv]
+package = false
